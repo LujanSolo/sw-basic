@@ -1,3 +1,13 @@
+body {
+  background-color: rgb(42, 44, 66);
+  color: white;
+  font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+
+input {
+  text-align: right;
+}
+
 .character-details {
     display: flex;
     flex-direction: column;
@@ -8,10 +18,58 @@
 }
 
 .character-details input {
-    width: 80vw;
+    width: auto;
     height: 2rem;
     margin-bottom: 0.5rem;
     border: 1px solid #ccc;
     border-radius: 0.25rem;
     padding: 0 0.5rem;
 }
+
+.character-stats {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.attribute-card {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin-bottom: 1rem;
+  border: 1px solid red;
+}
+
+.card-header {
+  display: flex;
+
+}
+
+.card-header input{
+  width: 30px;
+  margin-left: 48px;
+}
+.card-title {
+  font-size: 1.3rem;
+}
+
+.card-body .label-input-group {
+  display: block;
+  margin: 10px; /* Optional: Add space between label/input pairs */
+}
+
+.card-body .label-input-group input {
+  display: inline-block;
+  /* Adjust width, margin, padding, etc., as needed */
+  /* Example styles: */
+  width: 30px;
+  margin-right: 10px;
+}
+.label-input-group label {
+  display: inline-block;
+  /* Adjust width, margin, padding, etc., as needed */
+  /* Example styles: */
+  width: 120px;
+  margin-right: 10px;
+}
+

@@ -14,15 +14,41 @@
 
   <section class="character-details">
     <h2>Character Details</h2>
-    <label for="character-name">Character Name</label>
-    <input type="text" name="character-name" id="character-name">
-    <label for="character-age">Character Age</label>
-    <input type="number" name="character-age" id="character-age">
-    <label for="character-height">Character Height</label>
-    <input type="number" name="character-height" id="character-height" placeholder="in meters...">
-    <label for="character-description">Character Description</label>
-    <textarea name="character-description" id="character-description" cols="50" rows="8"></textarea>
+    <div class="details-group">
+      <label for="character-name">Character Name</label>
+      <input type="text" name="character-name" id="character-name">
+      <label for="character-age">Character Age</label>
+      <input type="number" name="character-age" id="character-age">
+      <label for="character-height">Character Height</label>
+      <input type="number" name="character-height" id="character-height" placeholder="in meters...">
+      <label for="character-description">Character Description</label>
+      <textarea name="character-description" id="character-description" cols="50" rows="8"></textarea>
+    </div>
+    
+
+    <aside>
+      <label for="force-pts">Force Points
+        <input type="number" name="force-pts" id="force-pts" />
+      </label>
+      <label for="dark-side-pts">Dark Side Points
+        <input type="number" name="dark-side-pts" id="dark-side-pts" />
+      </label>
+      <label for="character-points">Character Points
+        <input type="number" name="character-points" id="character-points" />
+      </label>
+      <label for="wound-status">Wound Status
+        <select name="wound-status" id="wound-status">
+          <option value="healthy">Healthy</option>
+          <option value="stunned">Stunned</option>
+          <option value="wounded">Wounded</option>
+          <option value="incapacitated">Incapacitated</option>
+          <option value="mortally-wounded">Mortally Wounded</option>
+        </select>
+      </label>
+    </aside>
   </section>
+
+  
 
   <h2>Character Stats</h2>
   <section class="character-stats">

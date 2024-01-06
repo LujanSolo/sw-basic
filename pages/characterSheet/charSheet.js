@@ -1,11 +1,4 @@
-// const ageSelection = document.getElementById("character-age");
-
-// ageSelection[0] = new Option("Select Age", 0);
-// for(let i = 1; i < 901; i++){
-//   ageSelection[i] = new Option(i, i);
-// };
-
-// document.body.appendChild(ageSelection);
+const characterStatsSection = document.getElementById("character-stats");
 
 const attributesAndSkills = {
   dexterity: {
@@ -86,8 +79,8 @@ const attributesAndSkills = {
       },
     }
   },
-  dexterity: {
-    name: "Dexterity",
+  knowledge: {
+    name: "Knowledge",
     value: 0,
     pips: 0,
     skills: {
@@ -125,8 +118,8 @@ const attributesAndSkills = {
       },
     }
   },
-  dexterity: {
-    name: "Dexterity",
+  strength: {
+    name: "Strength",
     value: 0,
     pips: 0,
     skills: {
@@ -164,8 +157,8 @@ const attributesAndSkills = {
       },
     }
   },
-  dexterity: {
-    name: "Dexterity",
+  mechanical: {
+    name: "Mechanical",
     value: 0,
     pips: 0,
     skills: {
@@ -203,8 +196,8 @@ const attributesAndSkills = {
       },
     }
   },
-  dexterity: {
-    name: "Dexterity",
+  technical: {
+    name: "Technical",
     value: 0,
     pips: 0,
     skills: {
@@ -243,3 +236,24 @@ const attributesAndSkills = {
     }
   },
 };
+
+Object.keys(attributesAndSkills).forEach((attribute) => {
+  const attributeData = attributesAndSkills[attribute];
+
+  characterStatsSection.innerHTML += `
+    <div class="attribute-card">
+      <div class="card-header">
+        <label class="card-title" for="${attributeData.name.toLowerCase()}">${attributeData.name}</label>
+        <input type="number" name="${attributeData.name.toLowerCase()}" id="${attributeData.name.toLowerCase()}" value="${attributeData.value}" />
+      </div>
+  `;
+
+  Object.entries(attributeData.skills).forEach(([skill, skillData]) => {
+    characterStatsSection.innerHTML += `
+      <div class="card-body">
+        <div class="label-input-group">
+          <label class="card-skills" for="${skillData.name.toLowerCase()}-skill">${skillData.name}</label>
+          <input type=number" name="${skillData.name.toLowerCase()}-skill" id="${skillData.name.toLowerCase()}-skill" value="${skillData.value}" />
+    `;
+  });
+})

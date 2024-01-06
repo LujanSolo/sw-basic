@@ -239,6 +239,16 @@ const attributesAndSkills = {
 
 Object.keys(attributesAndSkills).forEach((attribute) => {
   const attributeData = attributesAndSkills[attribute];
+  let skillsHTML = "";
+  
+  Object.entries(attributeData.skills).forEach(([skill, skillData]) => {
+    skillsHTML += `
+        <div class="label-input-group">
+          <label class="card-skills" for="${skillData.name.toLowerCase()}-skill">${skillData.name}</label>
+          <input type=number" name="${skillData.name.toLowerCase()}-skill" id="${skillData.name.toLowerCase()}-skill" value="${skillData.value}" />
+        </div>
+    `;
+  });
 
   characterStatsSection.innerHTML += `
     <div class="attribute-card">
@@ -246,14 +256,8 @@ Object.keys(attributesAndSkills).forEach((attribute) => {
         <label class="card-title" for="${attributeData.name.toLowerCase()}">${attributeData.name}</label>
         <input type="number" name="${attributeData.name.toLowerCase()}" id="${attributeData.name.toLowerCase()}" value="${attributeData.value}" />
       </div>
-  `;
-
-  Object.entries(attributeData.skills).forEach(([skill, skillData]) => {
-    characterStatsSection.innerHTML += `
       <div class="card-body">
-        <div class="label-input-group">
-          <label class="card-skills" for="${skillData.name.toLowerCase()}-skill">${skillData.name}</label>
-          <input type=number" name="${skillData.name.toLowerCase()}-skill" id="${skillData.name.toLowerCase()}-skill" value="${skillData.value}" />
-    `;
-  });
-})
+        ${skillsHTML}
+    </div>
+  `;
+});

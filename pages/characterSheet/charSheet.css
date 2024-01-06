@@ -35,6 +35,11 @@ aside {
   align-self: center;
 }
 
+.card-skills {
+  font-size: 12px;
+  margin-left: 20px;
+}
+
 /* .details-group {
   display: flex;
   flex-direction: column;

@@ -9,307 +9,323 @@
 </head>
 
 <body>
+  <header>
+    <h1>Star Wars D6 Character Template</h1>
+  </header>
 
-  <h1>Star Wars D6 Character Template</h1>
+  <form>
+    <section class="character-details">
+      <h2>Character Details</h2>
 
-  <section class="character-details">
-    <h2>Character Details</h2>
-    <div class="details-group">
-      <label for="character-name">Character Name</label>
-      <input type="text" name="character-name" id="character-name">
-      <label for="character-age">Character Age</label>
-      <input type="number" name="character-age" id="character-age">
-      <label for="character-height">Character Height</label>
-      <input type="number" name="character-height" id="character-height" placeholder="in meters...">
-      <label for="character-description">Character Description</label>
-      <textarea name="character-description" id="character-description" cols="50" rows="8"></textarea>
-    </div>
-    
+      <div class="details-group">
+        <div class="label-input-combo">
+          <label for="character-name">Character Name: </label>
+          <input type="text" name="character-name" id="character-name">
+        </div>
 
-    <aside>
-      <label for="force-pts">Force Points
-        <input type="number" name="force-pts" id="force-pts" />
-      </label>
-      <label for="dark-side-pts">Dark Side Points
-        <input type="number" name="dark-side-pts" id="dark-side-pts" />
-      </label>
-      <label for="character-points">Character Points
-        <input type="number" name="character-points" id="character-points" />
-      </label>
-      <label for="wound-status">Wound Status
-        <select name="wound-status" id="wound-status">
-          <option value="healthy">Healthy</option>
-          <option value="stunned">Stunned</option>
-          <option value="wounded">Wounded</option>
-          <option value="incapacitated">Incapacitated</option>
-          <option value="mortally-wounded">Mortally Wounded</option>
-        </select>
-      </label>
-    </aside>
-  </section>
+        <div class="label-input-combo">
+          <label for="character-age">Character Age: </label>
+          <input type="number" name="character-age" id="character-age">
+        </div>
 
-  
+        <div class="label-input-combo">
+          <label for="character-height">Character Height: </label>
+          <input type="number" name="character-height" id="character-height" placeholder="in meters...">
+        </div>
 
-  <h2>Character Stats</h2>
-  <section class="character-stats">
-    <!--* Dexterity Card -->
-    <div class="attribute-card" id="dex-card">
-      <div class="card-header">
-        <label class="card-title" for="dex">Dexterity</label>
-        <input type="number" name="dex" id="dex">
+        <div class="label-input-combo">
+          <label for="character-description">Character Description: </label>
+          <textarea name="character-description" id="character-description" cols="30" rows="5"></textarea>
+        </div>
+
       </div>
-      <div class="card-body">
-        <div class="label-input-group">
-          <label class="card-skills" for="blaster-skill">Blaster</label>
-          <input type="number" name="blaster-skill" id="blaster-skill">
-        </div>
-        <div class="label-input-group">
-          <label class="card-skills" for="brawling-parry-skill">Brawling Parry</label>
-          <input type="number" name="brawling-parry-skill" id="brawling-parry-skill">
-        </div>
 
-        <div class="label-input-group">
-          <label class="card-skills" for="dodge-skill">Dodge</label>
-          <input type="number" name="dodge-skill" id="dodge-skill">
-        </div>
+      <aside>
+        <label for="force-pts">Force Points
+          <input class="aside-inputs" type="number" name="force-pts" id="force-pts" />
+        </label>
+        <label for="dark-side-pts">Dark Side Points
+          <input class="aside-inputs" type="number" name="dark-side-pts" id="dark-side-pts" />
+        </label>
+        <label for="character-points">Character Points
+          <input class="aside-inputs" type="number" name="character-points" id="character-points" />
+        </label>
+        <label for="wound-status">Wound Status
+          <select name="wound-status" id="wound-status">
+            <option value="healthy">Healthy</option>
+            <option value="stunned">Stunned</option>
+            <option value="wounded">Wounded</option>
+            <option value="incapacitated">Incapacitated</option>
+            <option value="mortally-wounded">Mortally Wounded</option>
+          </select>
+        </label>
+      </aside>
+    </section>
 
-        <div class="label-input-group">
-          <label class="card-skills" for="grenade-skill">Grenade</label>
-          <input type="number" name="grenade-skill" id="grenade-skill">
-        </div>
+    <!--*character stats -->
+    <h2>Character Stats</h2>
 
-        <div class="label-input-group">
-          <label class="card-skills" for="heavy-weapons-skill">Heavy Weapons</label>
-          <input type="number" name="heavy-weapons-skill" id="heavy-weapons-skill">
-        </div>
+    <section class="character-stats">
 
-        <div class="label-input-group">
-          <label class="card-skills" for="melee-parry-skill">Melee Parry</label>
-          <input type="number" name="melee-parry-skill" id="melee-parry-skill">
+      <!--* Dexterity Card -->
+      <div class="attribute-card" id="dex-card">
+        <div class="card-header">
+          <label class="card-title" for="dex">Dexterity</label>
+          <input type="number" name="dex" id="dex">
         </div>
+        <div class="card-body">
+          <div class="label-input-group">
+            <label class="card-skills" for="blaster-skill">Blaster</label>
+            <input type="number" name="blaster-skill" id="blaster-skill">
+          </div>
+          <div class="label-input-group">
+            <label class="card-skills" for="brawling-parry-skill">Brawling Parry</label>
+            <input type="number" name="brawling-parry-skill" id="brawling-parry-skill">
+          </div>
 
-        <div class="label-input-group">
-          <label class="card-skills" for="melee-skill">Melee</label>
-          <input type="number" name="melee-skill" id="melee-skill">
-        </div>
-      </div>
-    </div>
+          <div class="label-input-group">
+            <label class="card-skills" for="dodge-skill">Dodge</label>
+            <input type="number" name="dodge-skill" id="dodge-skill">
+          </div>
 
-    <!--* Perception Card -->
-    <div class="attribute-card" id="dex-card">
-      <div class="card-header">
-        <label class="card-title" for="dex">Perception</label>
-        <input type="number" name="dex" id="dex">
-      </div>
-      <div class="card-body">
-        <div class="label-input-group">
-          <label class="card-skills" for="blaster-skill">Blaster</label>
-          <input type="number" name="blaster-skill" id="blaster-skill">
-        </div>
-        <div class="label-input-group">
-          <label class="card-skills" for="brawling-parry-skill">Brawling Parry</label>
-          <input type="number" name="brawling-parry-skill" id="brawling-parry-skill">
-        </div>
+          <div class="label-input-group">
+            <label class="card-skills" for="grenade-skill">Grenade</label>
+            <input type="number" name="grenade-skill" id="grenade-skill">
+          </div>
 
-        <div class="label-input-group">
-          <label class="card-skills" for="dodge-skill">Dodge</label>
-          <input type="number" name="dodge-skill" id="dodge-skill">
-        </div>
+          <div class="label-input-group">
+            <label class="card-skills" for="heavy-weapons-skill">Heavy Weapons</label>
+            <input type="number" name="heavy-weapons-skill" id="heavy-weapons-skill">
+          </div>
 
-        <div class="label-input-group">
-          <label class="card-skills" for="grenade-skill">Grenade</label>
-          <input type="number" name="grenade-skill" id="grenade-skill">
-        </div>
+          <div class="label-input-group">
+            <label class="card-skills" for="melee-parry-skill">Melee Parry</label>
+            <input type="number" name="melee-parry-skill" id="melee-parry-skill">
+          </div>
 
-        <div class="label-input-group">
-          <label class="card-skills" for="heavy-weapons-skill">Heavy Weapons</label>
-          <input type="number" name="heavy-weapons-skill" id="heavy-weapons-skill">
-        </div>
-
-        <div class="label-input-group">
-          <label class="card-skills" for="melee-parry-skill">Melee Parry</label>
-          <input type="number" name="melee-parry-skill" id="melee-parry-skill">
-        </div>
-
-        <div class="label-input-group">
-          <label class="card-skills" for="melee-skill">Melee</label>
-          <input type="number" name="melee-skill" id="melee-skill">
+          <div class="label-input-group">
+            <label class="card-skills" for="melee-skill">Melee</label>
+            <input type="number" name="melee-skill" id="melee-skill">
+          </div>
         </div>
       </div>
-    </div>
 
-    <!--* Knowledge Card -->
-    <div class="attribute-card" id="dex-card">
-      <div class="card-header">
-        <label class="card-title" for="dex">Knowledge</label>
-        <input type="number" name="dex" id="dex">
-      </div>
-      <div class="card-body">
-        <div class="label-input-group">
-          <label class="card-skills" for="blaster-skill">Blaster</label>
-          <input type="number" name="blaster-skill" id="blaster-skill">
+      <!--* Perception Card -->
+      <div class="attribute-card" id="dex-card">
+        <div class="card-header">
+          <label class="card-title" for="dex">Perception</label>
+          <input type="number" name="dex" id="dex">
         </div>
-        <div class="label-input-group">
-          <label class="card-skills" for="brawling-parry-skill">Brawling Parry</label>
-          <input type="number" name="brawling-parry-skill" id="brawling-parry-skill">
-        </div>
+        <div class="card-body">
+          <div class="label-input-group">
+            <label class="card-skills" for="blaster-skill">Blaster</label>
+            <input type="number" name="blaster-skill" id="blaster-skill">
+          </div>
+          <div class="label-input-group">
+            <label class="card-skills" for="brawling-parry-skill">Brawling Parry</label>
+            <input type="number" name="brawling-parry-skill" id="brawling-parry-skill">
+          </div>
 
-        <div class="label-input-group">
-          <label class="card-skills" for="dodge-skill">Dodge</label>
-          <input type="number" name="dodge-skill" id="dodge-skill">
-        </div>
+          <div class="label-input-group">
+            <label class="card-skills" for="dodge-skill">Dodge</label>
+            <input type="number" name="dodge-skill" id="dodge-skill">
+          </div>
 
-        <div class="label-input-group">
-          <label class="card-skills" for="grenade-skill">Grenade</label>
-          <input type="number" name="grenade-skill" id="grenade-skill">
-        </div>
+          <div class="label-input-group">
+            <label class="card-skills" for="grenade-skill">Grenade</label>
+            <input type="number" name="grenade-skill" id="grenade-skill">
+          </div>
 
-        <div class="label-input-group">
-          <label class="card-skills" for="heavy-weapons-skill">Heavy Weapons</label>
-          <input type="number" name="heavy-weapons-skill" id="heavy-weapons-skill">
-        </div>
+          <div class="label-input-group">
+            <label class="card-skills" for="heavy-weapons-skill">Heavy Weapons</label>
+            <input type="number" name="heavy-weapons-skill" id="heavy-weapons-skill">
+          </div>
 
-        <div class="label-input-group">
-          <label class="card-skills" for="melee-parry-skill">Melee Parry</label>
-          <input type="number" name="melee-parry-skill" id="melee-parry-skill">
-        </div>
+          <div class="label-input-group">
+            <label class="card-skills" for="melee-parry-skill">Melee Parry</label>
+            <input type="number" name="melee-parry-skill" id="melee-parry-skill">
+          </div>
 
-        <div class="label-input-group">
-          <label class="card-skills" for="melee-skill">Melee</label>
-          <input type="number" name="melee-skill" id="melee-skill">
-        </div>
-      </div>
-    </div>
-
-    <!--* Strength Card -->
-    <div class="attribute-card" id="dex-card">
-      <div class="card-header">
-        <label class="card-title" for="dex">Strength</label>
-        <input type="number" name="dex" id="dex">
-      </div>
-      <div class="card-body">
-        <div class="label-input-group">
-          <label class="card-skills" for="blaster-skill">Blaster</label>
-          <input type="number" name="blaster-skill" id="blaster-skill">
-        </div>
-        <div class="label-input-group">
-          <label class="card-skills" for="brawling-parry-skill">Brawling Parry</label>
-          <input type="number" name="brawling-parry-skill" id="brawling-parry-skill">
-        </div>
-
-        <div class="label-input-group">
-          <label class="card-skills" for="dodge-skill">Dodge</label>
-          <input type="number" name="dodge-skill" id="dodge-skill">
-        </div>
-
-        <div class="label-input-group">
-          <label class="card-skills" for="grenade-skill">Grenade</label>
-          <input type="number" name="grenade-skill" id="grenade-skill">
-        </div>
-
-        <div class="label-input-group">
-          <label class="card-skills" for="heavy-weapons-skill">Heavy Weapons</label>
-          <input type="number" name="heavy-weapons-skill" id="heavy-weapons-skill">
-        </div>
-
-        <div class="label-input-group">
-          <label class="card-skills" for="melee-parry-skill">Melee Parry</label>
-          <input type="number" name="melee-parry-skill" id="melee-parry-skill">
-        </div>
-
-        <div class="label-input-group">
-          <label class="card-skills" for="melee-skill">Melee</label>
-          <input type="number" name="melee-skill" id="melee-skill">
+          <div class="label-input-group">
+            <label class="card-skills" for="melee-skill">Melee</label>
+            <input type="number" name="melee-skill" id="melee-skill">
+          </div>
         </div>
       </div>
-    </div>
 
-    <!--* Mechanical Card -->
-    <div class="attribute-card" id="dex-card">
-      <div class="card-header">
-        <label class="card-title" for="dex">Mechanical</label>
-        <input type="number" name="dex" id="dex">
-      </div>
-      <div class="card-body">
-        <div class="label-input-group">
-          <label class="card-skills" for="blaster-skill">Blaster</label>
-          <input type="number" name="blaster-skill" id="blaster-skill">
+      <!--* Knowledge Card -->
+      <div class="attribute-card" id="dex-card">
+        <div class="card-header">
+          <label class="card-title" for="dex">Knowledge</label>
+          <input type="number" name="dex" id="dex">
         </div>
-        <div class="label-input-group">
-          <label class="card-skills" for="brawling-parry-skill">Brawling Parry</label>
-          <input type="number" name="brawling-parry-skill" id="brawling-parry-skill">
-        </div>
+        <div class="card-body">
+          <div class="label-input-group">
+            <label class="card-skills" for="blaster-skill">Blaster</label>
+            <input type="number" name="blaster-skill" id="blaster-skill">
+          </div>
+          <div class="label-input-group">
+            <label class="card-skills" for="brawling-parry-skill">Brawling Parry</label>
+            <input type="number" name="brawling-parry-skill" id="brawling-parry-skill">
+          </div>
 
-        <div class="label-input-group">
-          <label class="card-skills" for="dodge-skill">Dodge</label>
-          <input type="number" name="dodge-skill" id="dodge-skill">
-        </div>
+          <div class="label-input-group">
+            <label class="card-skills" for="dodge-skill">Dodge</label>
+            <input type="number" name="dodge-skill" id="dodge-skill">
+          </div>
 
-        <div class="label-input-group">
-          <label class="card-skills" for="grenade-skill">Grenade</label>
-          <input type="number" name="grenade-skill" id="grenade-skill">
-        </div>
+          <div class="label-input-group">
+            <label class="card-skills" for="grenade-skill">Grenade</label>
+            <input type="number" name="grenade-skill" id="grenade-skill">
+          </div>
 
-        <div class="label-input-group">
-          <label class="card-skills" for="heavy-weapons-skill">Heavy Weapons</label>
-          <input type="number" name="heavy-weapons-skill" id="heavy-weapons-skill">
-        </div>
+          <div class="label-input-group">
+            <label class="card-skills" for="heavy-weapons-skill">Heavy Weapons</label>
+            <input type="number" name="heavy-weapons-skill" id="heavy-weapons-skill">
+          </div>
 
-        <div class="label-input-group">
-          <label class="card-skills" for="melee-parry-skill">Melee Parry</label>
-          <input type="number" name="melee-parry-skill" id="melee-parry-skill">
-        </div>
+          <div class="label-input-group">
+            <label class="card-skills" for="melee-parry-skill">Melee Parry</label>
+            <input type="number" name="melee-parry-skill" id="melee-parry-skill">
+          </div>
 
-        <div class="label-input-group">
-          <label class="card-skills" for="melee-skill">Melee</label>
-          <input type="number" name="melee-skill" id="melee-skill">
-        </div>
-      </div>
-    </div>
-
-    <!--* Technical Card -->
-    <div class="attribute-card" id="dex-card">
-      <div class="card-header">
-        <label class="card-title" for="dex">Technical</label>
-        <input type="number" name="dex" id="dex">
-      </div>
-      <div class="card-body">
-        <div class="label-input-group">
-          <label class="card-skills" for="blaster-skill">Blaster</label>
-          <input type="number" name="blaster-skill" id="blaster-skill">
-        </div>
-        <div class="label-input-group">
-          <label class="card-skills" for="brawling-parry-skill">Brawling Parry</label>
-          <input type="number" name="brawling-parry-skill" id="brawling-parry-skill">
-        </div>
-
-        <div class="label-input-group">
-          <label class="card-skills" for="dodge-skill">Dodge</label>
-          <input type="number" name="dodge-skill" id="dodge-skill">
-        </div>
-
-        <div class="label-input-group">
-          <label class="card-skills" for="grenade-skill">Grenade</label>
-          <input type="number" name="grenade-skill" id="grenade-skill">
-        </div>
-
-        <div class="label-input-group">
-          <label class="card-skills" for="heavy-weapons-skill">Heavy Weapons</label>
-          <input type="number" name="heavy-weapons-skill" id="heavy-weapons-skill">
-        </div>
-
-        <div class="label-input-group">
-          <label class="card-skills" for="melee-parry-skill">Melee Parry</label>
-          <input type="number" name="melee-parry-skill" id="melee-parry-skill">
-        </div>
-
-        <div class="label-input-group">
-          <label class="card-skills" for="melee-skill">Melee</label>
-          <input type="number" name="melee-skill" id="melee-skill">
+          <div class="label-input-group">
+            <label class="card-skills" for="melee-skill">Melee</label>
+            <input type="number" name="melee-skill" id="melee-skill">
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+
+      <!--* Strength Card -->
+      <div class="attribute-card" id="dex-card">
+        <div class="card-header">
+          <label class="card-title" for="dex">Strength</label>
+          <input type="number" name="dex" id="dex">
+        </div>
+        <div class="card-body">
+          <div class="label-input-group">
+            <label class="card-skills" for="blaster-skill">Blaster</label>
+            <input type="number" name="blaster-skill" id="blaster-skill">
+          </div>
+          <div class="label-input-group">
+            <label class="card-skills" for="brawling-parry-skill">Brawling Parry</label>
+            <input type="number" name="brawling-parry-skill" id="brawling-parry-skill">
+          </div>
+
+          <div class="label-input-group">
+            <label class="card-skills" for="dodge-skill">Dodge</label>
+            <input type="number" name="dodge-skill" id="dodge-skill">
+          </div>
+
+          <div class="label-input-group">
+            <label class="card-skills" for="grenade-skill">Grenade</label>
+            <input type="number" name="grenade-skill" id="grenade-skill">
+          </div>
+
+          <div class="label-input-group">
+            <label class="card-skills" for="heavy-weapons-skill">Heavy Weapons</label>
+            <input type="number" name="heavy-weapons-skill" id="heavy-weapons-skill">
+          </div>
+
+          <div class="label-input-group">
+            <label class="card-skills" for="melee-parry-skill">Melee Parry</label>
+            <input type="number" name="melee-parry-skill" id="melee-parry-skill">
+          </div>
+
+          <div class="label-input-group">
+            <label class="card-skills" for="melee-skill">Melee</label>
+            <input type="number" name="melee-skill" id="melee-skill">
+          </div>
+        </div>
+      </div>
+
+      <!--* Mechanical Card -->
+      <div class="attribute-card" id="dex-card">
+        <div class="card-header">
+          <label class="card-title" for="dex">Mechanical</label>
+          <input type="number" name="dex" id="dex">
+        </div>
+        <div class="card-body">
+          <div class="label-input-group">
+            <label class="card-skills" for="blaster-skill">Blaster</label>
+            <input type="number" name="blaster-skill" id="blaster-skill">
+          </div>
+          <div class="label-input-group">
+            <label class="card-skills" for="brawling-parry-skill">Brawling Parry</label>
+            <input type="number" name="brawling-parry-skill" id="brawling-parry-skill">
+          </div>
+
+          <div class="label-input-group">
+            <label class="card-skills" for="dodge-skill">Dodge</label>
+            <input type="number" name="dodge-skill" id="dodge-skill">
+          </div>
+
+          <div class="label-input-group">
+            <label class="card-skills" for="grenade-skill">Grenade</label>
+            <input type="number" name="grenade-skill" id="grenade-skill">
+          </div>
+
+          <div class="label-input-group">
+            <label class="card-skills" for="heavy-weapons-skill">Heavy Weapons</label>
+            <input type="number" name="heavy-weapons-skill" id="heavy-weapons-skill">
+          </div>
+
+          <div class="label-input-group">
+            <label class="card-skills" for="melee-parry-skill">Melee Parry</label>
+            <input type="number" name="melee-parry-skill" id="melee-parry-skill">
+          </div>
+
+          <div class="label-input-group">
+            <label class="card-skills" for="melee-skill">Melee</label>
+            <input type="number" name="melee-skill" id="melee-skill">
+          </div>
+        </div>
+      </div>
+
+      <!--* Technical Card -->
+      <div class="attribute-card" id="dex-card">
+        <div class="card-header">
+          <label class="card-title" for="dex">Technical</label>
+          <input type="number" name="dex" id="dex">
+        </div>
+        <div class="card-body">
+          <div class="label-input-group">
+            <label class="card-skills" for="blaster-skill">Blaster</label>
+            <input type="number" name="blaster-skill" id="blaster-skill">
+          </div>
+          <div class="label-input-group">
+            <label class="card-skills" for="brawling-parry-skill">Brawling Parry</label>
+            <input type="number" name="brawling-parry-skill" id="brawling-parry-skill">
+          </div>
+
+          <div class="label-input-group">
+            <label class="card-skills" for="dodge-skill">Dodge</label>
+            <input type="number" name="dodge-skill" id="dodge-skill">
+          </div>
+
+          <div class="label-input-group">
+            <label class="card-skills" for="grenade-skill">Grenade</label>
+            <input type="number" name="grenade-skill" id="grenade-skill">
+          </div>
+
+          <div class="label-input-group">
+            <label class="card-skills" for="heavy-weapons-skill">Heavy Weapons</label>
+            <input type="number" name="heavy-weapons-skill" id="heavy-weapons-skill">
+          </div>
+
+          <div class="label-input-group">
+            <label class="card-skills" for="melee-parry-skill">Melee Parry</label>
+            <input type="number" name="melee-parry-skill" id="melee-parry-skill">
+          </div>
+
+          <div class="label-input-group">
+            <label class="card-skills" for="melee-skill">Melee</label>
+            <input type="number" name="melee-skill" id="melee-skill">
+          </div>
+        </div>
+      </div>
+    </section>
+  </form>
   <script src="charSheet.js"></script>
 </body>
 

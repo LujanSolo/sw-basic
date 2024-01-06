@@ -6,15 +6,26 @@ body {
 
 .character-details {
   display: flex;
-  justify-content: start;
-  align-items: flex-start;
-  margin-left: 2rem;
 }
 
 .details-group {
+  width: 50%;
+}
+
+.details-group * {
   display: flex;
-  flex-direction: column;
-  margin: 0 2rem;
+  justify-content: space-between;
+}
+
+.label-input-combo {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  width: 300px;
+}
+
+.label-input-combo label {
+  margin-right: 10px;
 }
 
 aside {
@@ -24,11 +35,26 @@ aside {
   align-self: center;
 }
 
+/* .details-group {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  width: -moz-fit-content;
+  width: fit-content;
+} */
+
+/* 
+
+
+.aside-inputs {
+  width: 50px;
+}
+
 input {
   text-align: right;
 }
 
-.character-details input {
+.details-group {
   width: auto;
   height: 2rem;
   margin-bottom: 0.5rem;
@@ -49,11 +75,6 @@ input {
   width: 40%;
   margin-bottom: 1rem;
   border: 1px solid red;
-}
-
-.card-header {
-  display: flex;
-
 }
 
 .card-header input {
@@ -86,3 +107,5 @@ input {
   width: 120px;
   margin-right: 10px;
 }
+
+*/
